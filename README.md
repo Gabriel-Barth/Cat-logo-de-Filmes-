@@ -1,2 +1,2 @@
-# Cat-logo-de-Filmes-
+# Catalogo de Filmes
 Biblioteca  de filmes com React e API do TMDB
