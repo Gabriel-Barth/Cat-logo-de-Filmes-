@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Movie.css"
+import MovieCard from "../components/MovieCard";
+
 import {
   BsGraphUp,
   BsWallet2,
@@ -24,13 +26,13 @@ const Movie = () => {
 
   const formatCurrency= (number)=>{
 return number.toLocaleString("en-US", {style: "currency", 
-currecy: "USD"}
+currency: "USD"}
 
 )
   }
 
   useEffect(() => {
-    const movieUrl = `${moviesURL}${id}?${apikey}`;
+    const movieUrl = `${moviesURL}${id}?${apikey}&language=pt-BR`;
     getMovie(movieUrl);
   }, []);
 
@@ -62,7 +64,7 @@ currecy: "USD"}
             <h3>
               <BsFillFileEarmarkTextFill /> Descrição:
             </h3>
-            <p>{movie.Overview}</p>
+            <p>{movie.overview}</p>
           </div>
         </>
       )}

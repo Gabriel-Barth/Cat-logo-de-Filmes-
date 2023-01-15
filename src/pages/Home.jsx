@@ -15,7 +15,7 @@ const Home = () => {
     const data = await res.json();
     SetTopMovies(data.results);
   };
-
+ 
   useEffect(() => {
     const topRatedUrl = `${moviesURL}top_rated?${apikey}&language=pt-BR`;
 console.log(topRatedUrl)
